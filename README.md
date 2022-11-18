@@ -21,4 +21,4 @@
 
 ## Data Source
 - There is some hard-coded data in `dashboard.php`. This is just for demo purposes. 
-- You can connect to your actual data source using `services/db.php` and `services/s3.php`.
+- You can connect to your actual data source using `services/db.php` or `services/s3.php`.
