@@ -20,6 +20,28 @@
     ];
     $bar_line_data_string = str_replace(' ', '%20%', json_encode($bar_line_data));
 
+    $combo_data = [
+        'labels' => ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        'datasets' => [
+            [
+                'label' => 'First Dataset',
+                'data' => [1, 2, 3, 2, 4, 5, 7],
+                'borderColor' => 'rgb(75, 192, 192)',
+                'backgroundColor' => 'rgb(75, 192, 192)',
+                'fill' => false
+            ],
+            [
+                'label' => 'Second Dataset',
+                'data' => [5, 6, 3, 4, 8, 6, 2],
+                'borderColor' => 'rgb(192, 75, 75)',
+                'backgroundColor' => 'rgb(192, 75, 75)',
+                'fill' => false,
+                'type' => 'bar'
+            ]
+        ]
+    ];
+    $combo_data_string = str_replace(' ', '%20%', json_encode($combo_data));
+
     $doughnut_data = [
         'labels' => ['A', 'B', 'C'],
         'datasets' => [
@@ -63,9 +85,14 @@
                         <script src='./static/js/bar_chart.js' canvas_id='myChart1' title='Bar Chart' data=$bar_line_data_string></script>
                     </div>
                     <div>
-                        <h3>Doughnut Chart</h3>
+                        <h3>Combo Chart</h3>
                         <canvas id='myChart2' width='500' height='300'></canvas>
-                        <script src='./static/js/doughnut_chart.js' canvas_id='myChart2' title='Doughnut Chart' data=$doughnut_data_string></script>
+                        <script src='./static/js/line_chart.js' canvas_id='myChart2' title='Combo Chart' data=$combo_data_string></script>
+                    </div>
+                    <div>
+                        <h3>Doughnut Chart</h3>
+                        <canvas id='myChart3' width='500' height='300'></canvas>
+                        <script src='./static/js/doughnut_chart.js' canvas_id='myChart3' title='Doughnut Chart' data=$doughnut_data_string></script>
                     </div>
                 </div>
             </body>
