@@ -1,4 +1,5 @@
 <?php
+function dashboard() {
     // Get the data for the charts
     $bar_line_data = [
         'labels' => ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -71,4 +72,5 @@
 
     // Render the template
     require('./app/Templates/Dashboard.php');
+}
 ?>
