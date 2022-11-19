@@ -1,4 +1,4 @@
-# A Dashboard Template with PHP & JS 
+# A Dashboard Template with PHP & Vanilla JS 
 
 ## Getting Started
 - Clone the repository
