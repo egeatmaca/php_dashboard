@@ -1,4 +1,4 @@
-# A Dashboard Template with PHP & Charts.js 
+# A Dashboard Template with PHP & JS 
 
 ## Getting Started
 - Clone the repository
