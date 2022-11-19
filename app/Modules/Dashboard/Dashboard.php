@@ -70,5 +70,5 @@
     $metric_percentage = 72;
 
     // Render the template
-    require('./Templates/Dashboard.php');
+    require('./app/Templates/Dashboard.php');
 ?>

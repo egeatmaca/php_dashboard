@@ -39,7 +39,7 @@
         <div>
             <h3> Table </h3>
             <?php
-                require './Templates/Table.php';
+                require './app/Templates/Table.php';
             ?>
             <script src="./static/js/dashboard/column_heatmap.js" 
                     table_id=<?php echo $table_data['table_id'] ?> 

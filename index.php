@@ -1,3 +1,3 @@
 <?php
-    require_once('./Modules/Dashboard/Dashboard.php');
+    require_once('./app/Modules/Dashboard/Dashboard.php');
 ?>
