@@ -1,6 +1,10 @@
 var table_id = document.currentScript.getAttribute("table_id");
-var table_headers = JSON.parse(document.currentScript.getAttribute("table_headers"));
-var data = JSON.parse(document.currentScript.getAttribute("data"));
+var table_headers = JSON.parse(
+  document.currentScript.getAttribute("table_headers").replaceAll("%20%", " ")
+);
+var data = JSON.parse(
+  document.currentScript.getAttribute("data").replaceAll("%20%", " ")
+);
 
 var table = "<div class='table-wrapper'>";
 if (table_id) {
@@ -20,7 +24,7 @@ for (var row of data) {
   table += "<tr>";
   for (i = 0; i < row.length; i++) {
     value = row[i];
-    table += "<td col="+i+">"+value+"</td>";
+    table += "<td col=" + i + ">" + value + "</td>";
   }
   table += "</tr>";
 }
@@ -30,4 +34,4 @@ table += "</div>";
 
 console.log(table);
 
-document.currentScript.insertAdjacentHTML('afterend', table);
+document.currentScript.insertAdjacentHTML("afterend", table);

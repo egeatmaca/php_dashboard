@@ -1,6 +1,13 @@
 # A Dashboard Template with PHP & Vanilla JS 
 
 ## Getting Started
+### with Docker
+- Clone the repository
+- For MySQL connection, put your database credentials in `config.json`.
+- For AWS S3 connection, put your AWS credentials in `docker-compose.yml`.
+- Run `docker-compose up`
+- Open `http://localhost:8000/` in your browser
+### with Manual Setup
 - Clone the repository
 - Setup for MySQL connection:
     - Add your database credentials to `config.json`.
@@ -10,13 +17,6 @@
     - Run `composer install`
 
 - Run `php -S localhost:8000`
-- Open `http://localhost:8000/` in your browser
-
-## Getting Started with Docker
-- Clone the repository
-- For MySQL connection, put your database credentials in `config.json`.
-- For AWS S3 connection, put your AWS credentials in `docker-compose.yml`.
-- Run `docker-compose up`
 - Open `http://localhost:8000/` in your browser
 
 ## Data Source

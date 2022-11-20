@@ -63,7 +63,7 @@ function dashboard() {
 
     $table_data = [
         'table_id' => 'myTable',
-        'table_headers' => json_string(['Col0', 'Col1', 'Col2']),
+        'table_headers' => json_string(['Col 0', 'Col 1', 'Col 2']),
         'data' => json_string([
             [1, 2, 3],
             [4, 5, 6],
