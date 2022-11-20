@@ -1,4 +1,8 @@
 <?php
+function json_string($obj) {
+    return str_replace(' ', '%20%', json_encode($obj));
+}
+
 function dashboard() {
     // Get the data for the charts
     $bar_line_data = [
@@ -20,7 +24,7 @@ function dashboard() {
             ]
         ]
     ];
-    $bar_line_data_string = str_replace(' ', '%20%', json_encode($bar_line_data));
+    $bar_line_data_string = json_string($bar_line_data);
 
     $combo_data = [
         'labels' => ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -42,7 +46,7 @@ function dashboard() {
             ]
         ]
     ];
-    $combo_data_string = str_replace(' ', '%20%', json_encode($combo_data));
+    $combo_data_string = json_string($combo_data);
 
     $doughnut_data = [
         'labels' => ['A', 'B', 'C'],
@@ -55,16 +59,16 @@ function dashboard() {
             ]
         ]
     ];
-    $doughnut_data_string = str_replace(' ', '%20%', json_encode($doughnut_data));
+    $doughnut_data_string = json_string($doughnut_data);
 
     $table_data = [
         'table_id' => 'myTable',
-        'table_headers' => ['Col0', 'Col1', 'Col2'],
-        'data' => [
+        'table_headers' => json_string(['Col0', 'Col1', 'Col2']),
+        'data' => json_string([
             [1, 2, 3],
             [4, 5, 6],
             [7, 8, 9]
-        ]
+        ])
     ];
 
     $metric_number = 267;

@@ -38,11 +38,13 @@
         </div>
         <div>
             <h3> Table </h3>
-            <?php
-                require './app/Templates/Table.php';
-            ?>
+            <script src="./static/js/dashboard/table.js" 
+                    table_id = <?php echo $table_data['table_id']?>
+                    table_headers = <?php echo $table_data['table_headers']?>
+                    data = <?php echo $table_data['data']?>> 
+            </script>           
             <script src="./static/js/dashboard/column_heatmap.js" 
-                    table_id=<?php echo $table_data['table_id'] ?> 
+                    table_id = <?php echo $table_data['table_id'] ?> 
                     columns="2"
                     colors="#ffffff,#4bc0c0">
             </script>
